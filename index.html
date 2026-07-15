@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111827" />
+  <meta
+    name="description"
+    content="Un regalo digital de cumpleaños hecho con amor."
+  />
+  <title>El jardín de nuestros recuerdos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <header class="hero" id="inicio">
+    <div class="hero__overlay"></div>
+
+    <button
+      id="musicButton"
+      class="music-button"
+      type="button"
+      aria-label="Reproducir música"
+      title="Reproducir música"
+    >
+      ♪
+    </button>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">Un pequeño regalo para una persona extraordinaria</p>
+      <h1>El jardín de nuestros recuerdos</h1>
+      <p class="hero__subtitle">
+        Hoy no quería darte solamente un regalo. Quería construir un lugar
+        donde guardar algunos de nuestros momentos, mis palabras y todo lo que
+        deseo seguir viviendo contigo.
+      </p>
+
+      <button class="primary-button" data-scroll="#bienvenida" type="button">
+        Entrar al jardín
+      </button>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="section welcome" id="bienvenida">
+      <div class="section__content section__content--two-columns">
+        <div>
+          <p class="section__label">Feliz cumpleaños</p>
+          <h2>Hoy celebramos tu vida</h2>
+          <p>
+            Celebro tu manera de sonreír, tu forma de ver el mundo, la calma que
+            transmites y todos esos pequeños detalles que te hacen única.
+          </p>
+          <p>
+            Gracias por estar, por compartir tu tiempo conmigo y por convertir
+            los días sencillos en recuerdos que quiero conservar.
+          </p>
+          <button class="secondary-button" data-scroll="#jardin" type="button">
+            Descubrir cada pétalo
+          </button>
+        </div>
+
+        <figure class="polaroid">
+          <img
+            src="assets/images/foto-principal.jpg"
+            alt="Nuestra fotografía favorita"
+            onerror="this.src='https://placehold.co/900x1100/efe6dc/5f4b3b?text=Agrega+su+foto+favorita'"
+          />
+          <figcaption>Una de mis fotografías favoritas de nosotros</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section garden-section" id="jardin">
+      <div class="section__content">
+        <p class="section__label">Explora el jardín</p>
+        <h2>Cada pétalo guarda algo para ti</h2>
+        <p class="section__intro">
+          Abre los seis pétalos. Cuando los hayas descubierto todos, se
+          desbloqueará la sorpresa final.
+        </p>
+
+        <div class="flower-wrapper">
+          <div class="flower" id="flower" aria-label="Margarita interactiva">
+            <button class="petal petal--1" data-panel="comienzo" type="button">
+              <span>Nuestro comienzo</span>
+            </button>
+            <button class="petal petal--2" data-panel="recuerdos" type="button">
+              <span>Recuerdos</span>
+            </button>
+            <button class="petal petal--3" data-panel="cualidades" type="button">
+              <span>Lo que amo de ti</span>
+            </button>
+            <button class="petal petal--4" data-panel="magia" type="button">
+              <span>Un toque de magia</span>
+            </button>
+            <button class="petal petal--5" data-panel="futuro" type="button">
+              <span>Nuestro futuro</span>
+            </button>
+            <button class="petal petal--6" data-panel="capsulas" type="button">
+              <span>Para cuando...</span>
+            </button>
+
+            <div class="flower__center">
+              <span id="flowerProgress">0/6</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panels">
+          <article class="memory-panel" id="comienzo">
+            <div class="memory-panel__header">
+              <span>01</span>
+              <h3>Nuestro comienzo</h3>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline__item">
+                <span class="timeline__date">Día especial</span>
+                <h4>El día en que comenzamos a hablar</h4>
+                <p>
+                  Todo se dio de la nada, una pisada, una patada, un mensaje y una sonrisa. Recuerdo que sentí algo diferente, algo que me hizo pensar que quería conocerte más.
+                </p>
+              </div>
+
+              <div class="timeline__item">
+                <span class="timeline__date">Primer recuerdo</span>
+                <h4>La primera vez que pensé: ella es especial</h4>
+                <p>
+                  Cuando nos conocimos, hubo un momento en que me di cuenta de que había algo en ti que me hacía sentir feliz y cómodo. Ese instante quedó grabado en mi memoria como el inicio de algo maravilloso.
+                  Fue cuando senti que podia perderte si te ibas lejos y me senti triste, con miedo de perderte, pero al final todo salio bien y me alegro de que sigamos juntos.
+                </p>
+              </div>
+
+              <div class="timeline__item">
+                <span class="timeline__date">Hasta hoy</span>
+                <h4>Todo lo que hemos construido</h4>
+                <p>
+                  Desde aquel primer mensaje, hemos compartido risas, aventuras y momentos que han fortalecido nuestra relación. Cada día contigo es un regalo, y estoy agradecido por cada recuerdo que hemos creado juntos.
+                  Esa confianza y cariño que hemos construido me hace sentir que podemos enfrentar cualquier cosa juntos. Gracias por ser parte de mi vida y por hacerla más hermosa.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="memory-panel" id="recuerdos">
+            <div class="memory-panel__header">
+              <span>02</span>
+              <h3>Mis recuerdos favoritos</h3>
+            </div>
+
+            <div class="gallery">
+              <figure class="gallery__item gallery__item--large">
+                <img
+                  src="assets/images/recuerdo-1.jpg"
+                  alt="Recuerdo favorito 1"
+                  onerror="this.src='https://placehold.co/900x1000/e8ded2/5f4b3b?text=Recuerdo+1'"
+                />
+                <figcaption>Ese día que no quería que terminara.</figcaption>
+              </figure>
+
+              <figure class="gallery__item">
+                <img
+                  src="assets/images/recuerdo-2.jpg"
+                  alt="Recuerdo favorito 2"
+                  onerror="this.src='https://placehold.co/700x700/e8ded2/5f4b3b?text=Recuerdo+2'"
+                />
+                <figcaption>Una de nuestras risas favoritas.</figcaption>
+              </figure>
+
+              <figure class="gallery__item">
+                <img
+                  src="assets/images/recuerdo-3.jpg"
+                  alt="Recuerdo favorito 3"
+                  onerror="this.src='https://placehold.co/700x700/e8ded2/5f4b3b?text=Recuerdo+3'"
+                />
+                <figcaption>Un momento sencillo que se volvió especial.</figcaption>
+              </figure>
+
+              <figure class="gallery__item gallery__item--wide">
+                <img
+                  src="assets/images/recuerdo-4.jpg"
+                  alt="Recuerdo favorito 4"
+                  onerror="this.src='https://placehold.co/1200x700/e8ded2/5f4b3b?text=Recuerdo+4'"
+                />
+                <figcaption>Una historia que siempre quiero recordar.</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="memory-panel" id="cualidades">
+            <div class="memory-panel__header">
+              <span>03</span>
+              <h3>Las cosas que amo de ti</h3>
+            </div>
+
+            <div class="qualities-grid">
+              <button type="button" class="quality-card">
+                <span>01</span>
+                <strong>Tu sonrisa</strong>
+                <small>Porque ilumina incluso los días complicados.</small>
+              </button>
+
+              <button type="button" class="quality-card">
+                <span>02</span>
+                <strong>Tu forma de escuchar</strong>
+                <small>Porque haces que cada palabra se sienta importante.</small>
+              </button>
+
+              <button type="button" class="quality-card">
+                <span>03</span>
+                <strong>Tu inteligencia</strong>
+                <small>Porque admiro la forma en que piensas y aprendes.</small>
+              </button>
+
+              <button type="button" class="quality-card">
+                <span>04</span>
+                <strong>Tu ternura</strong>
+                <small>Porque está presente hasta en los detalles más pequeños.</small>
+              </button>
+
+              <button type="button" class="quality-card">
+                <span>05</span>
+                <strong>Tu fortaleza</strong>
+                <small>Porque sigues adelante aun cuando no todo es sencillo.</small>
+              </button>
+
+              <button type="button" class="quality-card">
+                <span>06</span>
+                <strong>La paz que me das</strong>
+                <small>Porque contigo siento que puedo ser yo mismo.</small>
+              </button>
+            </div>
+
+            <blockquote>
+              Podría llenar esta página con razones, pero ninguna lista sería
+              suficiente para explicar todo lo que significas para mí.
+            </blockquote>
+          </article>
+
+          <article class="memory-panel" id="magia">
+            <div class="memory-panel__header">
+              <span>04</span>
+              <h3>Una carta con un poco de magia</h3>
+            </div>
+
+            <div class="letter">
+              <div class="letter__seal">I</div>
+              <p class="letter__place">Colegio de Magia, Recuerdos y Aventuras</p>
+              <h4>Carta de aceptación</h4>
+
+              <p>Estimada <strong>Isis</strong>:</p>
+
+              <p>
+                Nos complace informarte que has sido seleccionada para celebrar
+                un nuevo año lleno de magia, aventuras, aprendizaje, risas y
+                momentos extraordinarios.
+              </p>
+
+              <p>
+                Has destacado especialmente en las materias de ternura,
+                inteligencia, paciencia, valentía y capacidad para hacer feliz a
+                una persona que te quiere muchísimo.
+              </p>
+
+              <p>
+                Tu misión para este nuevo ciclo será seguir brillando, confiar en
+                ti y permitir que las personas que te aman celebren contigo cada
+                uno de tus logros.
+              </p>
+
+              <p class="letter__signature">
+                Con todo mi amor,<br />
+                <span>Tu persona favorita</span>
+              </p>
+            </div>
+          </article>
+
+          <article class="memory-panel" id="futuro">
+            <div class="memory-panel__header">
+              <span>05</span>
+              <h3>Todo lo que quiero vivir contigo</h3>
+            </div>
+
+            <div class="future-grid">
+              <div class="future-card">
+                <span>✦</span>
+                <p>Conocer juntos un lugar nuevo.</p>
+              </div>
+              <div class="future-card">
+                <span>✦</span>
+                <p>Tener más citas tranquilas con café y largas conversaciones.</p>
+              </div>
+              <div class="future-card">
+                <span>✦</span>
+                <p>Compartir más ramen, películas y tardes sin prisa.</p>
+              </div>
+              <div class="future-card">
+                <span>✦</span>
+                <p>Tomarnos muchas más fotografías.</p>
+              </div>
+              <div class="future-card">
+                <span>✦</span>
+                <p>Celebrar tus logros y acompañarte en los días difíciles.</p>
+              </div>
+              <div class="future-card">
+                <span>✦</span>
+                <p>Seguir construyendo recuerdos que algún día volveremos a mirar.</p>
+              </div>
+            </div>
+
+            <p class="future-message">
+              No quiero prometerte una vida perfecta. Quiero prometerte mi
+              intención de seguir construyendo contigo momentos sinceros,
+              tranquilos, divertidos y llenos de cariño.
+            </p>
+          </article>
+
+          <article class="memory-panel" id="capsulas">
+            <div class="memory-panel__header">
+              <span>06</span>
+              <h3>Mensajes para distintos momentos</h3>
+            </div>
+
+            <div class="capsules">
+              <button
+                class="capsule"
+                data-title="Para cuando estés triste"
+                data-message="No tienes que estar bien todo el tiempo. Estoy aquí para escucharte, abrazarte y recordarte que ningún día difícil define todo lo que eres."
+                type="button"
+              >
+                Para cuando estés triste
+              </button>
+
+              <button
+                class="capsule"
+                data-title="Para cuando dudes de ti"
+                data-message="Eres mucho más fuerte, inteligente y valiosa de lo que a veces alcanzas a ver. Yo conozco todo lo bueno que existe dentro de ti."
+                type="button"
+              >
+                Para cuando dudes de ti
+              </button>
+
+              <button
+                class="capsule"
+                data-title="Para cuando no puedas dormir"
+                data-message="Respira despacio. Piensa en un lugar tranquilo, en una tarde juntos y en todas las cosas bonitas que todavía nos esperan."
+                type="button"
+              >
+                Para cuando no puedas dormir
+              </button>
+
+              <button
+                class="capsule"
+                data-title="Para cuando me extrañes"
+                data-message="Mira alguna de nuestras fotografías y recuerda que, aunque no esté a tu lado en ese instante, sigues ocupando un lugar enorme en mis pensamientos."
+                type="button"
+              >
+                Para cuando me extrañes
+              </button>
+
+              <button
+                class="capsule"
+                data-title="Para cuando necesites sonreír"
+                data-message="Recuerda uno de nuestros momentos más absurdos, esa risa que no podíamos detener y la suerte que tengo de compartir contigo tantas historias."
+                type="button"
+              >
+                Para cuando necesites sonreír
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-section" id="sorpresa">
+      <div class="section__content final-card">
+        <p class="section__label">Sorpresa final</p>
+        <h2 id="finalTitle">Abre todos los pétalos para desbloquearla</h2>
+        <p id="finalDescription">
+          Cada recuerdo forma parte de esta historia.
+        </p>
+
+        <div class="lock" id="lock" aria-hidden="true">🔒</div>
+
+        <div class="final-surprise" id="finalSurprise" hidden>
+          <div class="video-frame">
+            <video controls preload="metadata" poster="assets/images/portada-video.jpg">
+              <source src="assets/media/video-final.mp4" type="video/mp4" />
+              Tu navegador no puede reproducir este video.
+            </video>
+          </div>
+
+          <div class="final-message">
+            <h3>Feliz cumpleaños, mi amor</h3>
+            <p>
+              Has llegado al final de esta página, pero todavía nos quedan muchas
+              historias por comenzar.
+            </p>
+            <p>
+              Gracias por existir, por compartir tu tiempo conmigo y por hacer
+              mi vida más bonita con tu presencia.
+            </p>
+            <strong>Te amo.</strong>
+
+            <button id="giftButton" class="primary-button" type="button">
+              Reclamar mi regalo
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho con amor para tu cumpleaños.</p>
+  </footer>
+
+  <dialog class="message-dialog" id="messageDialog">
+    <button class="dialog-close" id="closeDialog" type="button" aria-label="Cerrar">×</button>
+    <p class="section__label">Una nota para ti</p>
+    <h3 id="dialogTitle"></h3>
+    <p id="dialogMessage"></p>
+  </dialog>
+
+  <dialog class="message-dialog gift-dialog" id="giftDialog">
+    <button class="dialog-close" id="closeGiftDialog" type="button" aria-label="Cerrar">×</button>
+    <p class="section__label">Tu sorpresa</p>
+    <h3>Este es solo el comienzo</h3>
+    <p>
+      Tu regalo continúa este domingo. Ese día quiero complementarlo y celebrarlo juntos como te mereces.
+      Solo necesitas estar lista amorcito!!!
+    </p>
+    <p class="gift-code">PISTA: TE GUSTARA!!!</p>
+  </dialog>
+
+  <audio id="backgroundMusic" loop>
+    <source src="assets/media/cancion.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
